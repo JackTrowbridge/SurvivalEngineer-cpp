@@ -5,6 +5,8 @@ project(SurvivalEngineer)
 add_executable(SurvivalEngineer
     src/main.cpp
     src/window/WindowManager.cpp
+    src/player/Player.cpp
+    src/debugger/Debugger.cpp
 )
 
 # Include directories

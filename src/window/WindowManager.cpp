@@ -12,6 +12,7 @@ WindowManager::WindowManager(int width, int height, const char* title)
 	while (!WindowShouldClose())
 	{
 		Draw();
+		drawDebugger();
 		EndDraw();
 	}
 
@@ -33,7 +34,7 @@ void WindowManager::Draw()
 	rlPushMatrix();
 		rlTranslatef(0, 25*50, 0);
 		rlRotatef(90, 1, 0, 0);
-		DrawGrid(100, 50);
+		if(sceneGridVisible) DrawGrid(100, 25);
 	rlPopMatrix();
 
 	EndMode2D();
@@ -55,4 +56,15 @@ void WindowManager::drawImGui()
 void WindowManager::endImGui()
 {
 	rlImGuiEnd();
+}
+
+void WindowManager::drawDebugger()
+{
+    if ((IsKeyDown(KEY_LEFT_SHIFT) || IsKeyDown(KEY_RIGHT_SHIFT)) && IsKeyPressed(KEY_D)) {
+		debuggerVisible = !debuggerVisible;
+	}
+
+	if(debuggerVisible){
+		debugger.drawDebugger(sceneGridVisible);
+	}
 }
