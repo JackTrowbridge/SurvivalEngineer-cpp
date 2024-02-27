@@ -1,5 +1,5 @@
 #include "spdlog/spdlog.h"
-#include "window/WindowManager.hpp"
+#include "window/WindowManager.h"
 
 int main() {
 	spdlog::info("Hello, World!");

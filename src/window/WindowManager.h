@@ -19,7 +19,6 @@ public:
 
 	void drawImGui();
 	void endImGui();
-private:
 };
 
 #endif

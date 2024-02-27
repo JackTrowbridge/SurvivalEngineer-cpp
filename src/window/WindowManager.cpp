@@ -1,4 +1,4 @@
-#include "WindowManager.hpp"
+#include "WindowManager.h"
 
 WindowManager::WindowManager(int width, int height, const char* title)
 {
@@ -17,6 +17,7 @@ WindowManager::WindowManager(int width, int height, const char* title)
 
 WindowManager::~WindowManager()
 {
+	rlImGuiShutdown();
 	CloseWindow();
 }
 
