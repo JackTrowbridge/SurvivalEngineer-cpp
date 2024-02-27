@@ -26,7 +26,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\window\WindowManager.h">
+    <ClInclude Include="src\window\WindowManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\..\tools\cPackages\rlImGui\rlImGui.h">
