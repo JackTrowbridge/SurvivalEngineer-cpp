@@ -5,6 +5,8 @@ WindowManager::WindowManager(int width, int height, const char* title)
 	InitWindow(width, height, title);
 	rlImGuiSetup(true);
 
+	camera.zoom = 1.0f;
+
 	SetTargetFPS(60);
 
 	while (!WindowShouldClose())
